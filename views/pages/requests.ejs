@@ -1,9 +1,38 @@
 <%# import the head and the nav header %> 
 <%- include('../partials/head') %>
 
-
-<p>Requests description placeholder.</p>
-
+<article>
+    <h3><%= locals.title || 'page title not set' %></h3>
+    
+    <p>Request and responses in a nutshell.</p>
+    
+    <h4>The HTTP Protocol</h4>
+    <p>What problem does it solve?</p>
+    
+    <h4>Syntax</h4>
+    <p>What does a request look like?</p>
+    
+    <h4>Request examples</h4>
+    <p>Some examples</p>
+    
+    <h4>Talking HTTP</h4>
+    <p>In order to send and receive requests you need an HTTP client.</p>
+    <ul>
+        <li>GUI</li>
+        <ul>
+            <li>Webbrowser</li>
+            <li>Postman</li>
+        </ul>
+        <li>Command line tools:</li>
+        <ul>
+            <li>Curl</li>
+            <li>httpie</li>
+        </ul>
+    </ul>
+    
+    <h4>Sources</h4>
+    <p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages</p>
+</article>
 
 <%# import the footer %> 
 <%- include('../partials/foot') %>

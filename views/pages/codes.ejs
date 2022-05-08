@@ -1,8 +1,58 @@
 <%# import the head and the nav header %> 
 <%- include('../partials/head') %>
 
+<article>
+    <h3><%= locals.title || 'page title not set' %></h3>
 
-<p>Codes description placeholder.</p>
+    <p>An HTTP response always includes a status code. The code describes how the server handled the request.</p>
+    
+    <h4>Status code overiew</h4>
+    <ul>
+        <li>1XX Informational responses</li>
+            <ul>
+                <li><b>100 Continue</b>: initial part of request has been received.</li>
+            </ul>
+        <li>2XX Succesful responses</li>
+            <ul>
+                <li><b>200 OK</b>: request succesful.</li>
+                <li><b>201 Created</b>: resource created.</li>
+                <li><b>204 No Content</b>: response contains headers but no content.</li>
+                <li><b>206 Partial content</b>: response contains only the requested part of resource.</li>
+            </ul>
+        <li>3XX Redirection messages</li>
+            <ul>
+                <li><b>301 Moved Permanently</b>: redirect; resource changed, response contains new URL.</li>
+                <li><b>302 Found</b>: redirect; URL of resource changed temporarily.</li>
+                <li><b>304 Not Modified</b>: client can continue to use the same cached version.</li>
+                <li><b>307 Temporary Redirect</b>: same semantics as 303 but HTTP request method must not change.</li>
+                <li><b>308 Permanent Redirect</b>: same semantics as 301 but HTTP request method must not change.</li>
+            </ul>
+        <li>4XX Client error reponses</li>
+            <ul>
+                <li><b>400 Bad Request</b>: client request error; server cannot process the request.</li>
+                <li><b>401 Unauthorized</b>: the client is not authenticated.</li>
+                <li><b>403 Forbidden</b>: the (authenticated) client does not have access to the resource.</li>
+                <li><b>404 Not Found</b>: the server can not find (or hides) the resource.</li>
+                <li><b>405 Method Not Allowed</b>: the resource does not support the request method.</li>
+                <li><b>418 I'm a Teapot</b>: Larry Masinter's April Fools' Day <a href="https://datatracker.ietf.org/doc/html/rfc2324">RFC</a>.</li>
+                <li><b>429 Too Many Requests</b>: rate limit error; too many request in a given amount of time.</li>
+            </ul>
+        <li>5XX Server error responses</li>
+            <ul>
+                <li><b>500 Internal Server Error</b>: generic error response; the server is unable to handle the request.</li>
+                <li><b>501 Not Implemented</b>: unsupported request method (GET/HEAD requests are always supported, see also status code 405.</li>
+                <li><b>502 Bad Gateway</b>: the server received an invalid response from the upstream server. Meaning that the server in the HTTP request functions as a gatewa or proxy.</li>
+            </ul>
+    </ul>
+    
+    <h4>Sources</h4>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">
+            https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+        </a>
+    </p>
+</article>
+
 
 
 <%# import the footer %> 

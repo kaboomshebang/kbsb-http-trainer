@@ -1,8 +1,60 @@
 <%# import the head and the nav header %> 
 <%- include('../partials/head') %>
 
+<article>
+    <h3><%= locals.title || 'page title not set' %></h3>
+    
+    <p>
+        <u>Request methods indicate the desired action to be performed for a give resource.</u>
+    </p>
+    
+    <ul>
+        <li><i>Note: the target of an HTTP request is called a "resource".</i></li>
+        <li><i>Note: request methods are sometimes referred to as HTTP verbs.</i></li>
+    </ul>
+    
+    
+    <h4>Request methods</h4>
+    <ul>
+        <li>GET: requests (a representation of) a resource. (Safe)</li>
+        <li>HEAD: only GET the headers (without the body). (Safe)</li>
+        <li>POST: submit/send data to the server.</li>
+        <li>PUT: create or update a resource on the server. The request contains all the resource data. (Idempotent)</li>
+        <li>DELETE: delete the resource on the server. (Idempotent)</li>
+        <li>PATCH: a request that contains instruction on how to modify a resource. The request contains only the modified data.</li>
+        <li>OPTIONS: request the permitted HTTP request methods for a specified resource.</li>
+        <li>CONNECT</li>
+        <li>TRACE</li>
+    </ul>
+    <p>
+        <i>Note: the HTTP request methods are somewhat analogous to the CRUD (Create, Read, Update, Delete) database operations.</i>
+    </p>
+    
+    <h4>Common request method features</h4>
+    <ul>
+        <li>Safe: An HTTP method is safe if it doesn't alter the state of the server (read-only).</li>
+        <li>Idempotent: A method is idem(the same) potent(powerful) if the next identical request <b>leaves</b> the server in the same state.</li>
+        <li>Cachable: A response that can be cached.</li>
+    </ul>
+    
+    <h4>HTTP Spec</h4>
+    <ul>
+        <li><a href="https://datatracker.ietf.org/doc/html/rfc7231#section-4.1">
+                https://datatracker.ietf.org/doc/html/rfc7231#section-4.1</a>
+        </li>
+        <li><a href="https://datatracker.ietf.org/doc/html/rfc5789#section-2">
+                https://datatracker.ietf.org/doc/html/rfc5789#section-2</a>
+        </li>
+    </ul>
+    
+    <h4>Sources</h4>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">
+            https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+        </a>
+    </p>
 
-<p>Methods description placeholder.</p>
+</article>
 
 
 <%# import the footer %> 

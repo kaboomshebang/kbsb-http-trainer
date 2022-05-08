@@ -1,9 +1,39 @@
 <%# import the head and the nav header %> 
 <%- include('../partials/head') %>
 
-
-<p>Headers description placeholder.</p>
-
+<article>
+    <h3><%= locals.title || 'page title not set' %></h3>
+    
+    <p>
+        <u>Headers give the client or server information about the request
+        or response.</u>
+    </p>
+    
+    <p>
+        The can be grouped according to their context:
+    </p>
+    <ul>
+        <li>Request headers: additional information about the resource or client</li>
+        <li>Response headers: additional information about the response</li>
+        <li>Representation headers: information about the body</li>
+        <li>Payload headers: </li>
+    </ul>
+    
+    <h4>Headers overiew</h4>
+    <ul>
+        <li>Request headers</li>
+        <li>Response headers</li>
+        <li>Representation headers</li>
+        <li>Payload headers</li>
+    </ul>
+    
+    <h4>Sources</h4>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">
+            https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+        </a>
+    </p>
+</article>
 
 <%# import the footer %> 
 <%- include('../partials/foot') %>

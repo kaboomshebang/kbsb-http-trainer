@@ -1,8 +1,52 @@
 <%# import the head and the nav header %> 
 <%- include('../partials/head') %>
 
+<article>
+    <h3>Home</h3>
 
-<p>Index description placeholder.</p>
+    <p>
+        <u>Let's learn some HTTP by creating a simple Express app</u>.
+    </p>
+    
+    <p>
+        This application serves pages with information 
+        on the <b>Hyper Text Transfer Protocol</b>.
+        The different routes explain all the important parts of the HTTP spec.
+    
+        Call the API endpoints with an HTTP client to get detailed
+        information on the different request methods, status codes, headers 
+        and other protocol specifications.
+    </p>
+    
+    <p>
+        Go trough the project <a href="">source-code</a> to learn
+        how to setup a basic NodesJS/Express server.
+    </p>
+    
+    <h4>URL Structure</h4>
+    <pre>
+<code>
+    /                   Homepage
+    
+    /requests	        HTTP requests
+                            - request syntax, clients and examples
+    
+    /methods	        HTTP request methods overview
+    /methods/:method        - info on the individual methods
+    
+    /codes		        HTTP status codes overview
+    /codes/:code            - info on individual the codes
+    
+    /headers	        HTTP headers overview
+    /headers/:header        - info on a specific header
+</code>
+    </pre>
+    
+    <h4>Sources</h4>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">Mozilla Docs/Web/HTTP</a>
+    </p>
+</article>
 
 
 <%# import the footer %> 
