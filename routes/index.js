@@ -6,8 +6,7 @@ const router = Router();
 
 // routes
 router.get('/', (req, res, next) => {
-	const params = { title: 'Home' };
-	res.render('pages/index', params, (err, html) => {
+	res.render('pages/index', (err, html) => {
 		if (err) throw err;
 		res.send(html);
 	});
