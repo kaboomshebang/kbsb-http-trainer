@@ -9,6 +9,10 @@ const app = express();
 // setup EJS views
 app.set('views', './views');
 app.set('view engine', 'ejs');
+
+// set a static asset folder
+app.use(express.static('./public'));
+
 app.get('/', (req, res, next) => {
 	const params = { page: { title: 'Home' } };
 	res.render('index', params, (err, html) => {
