@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP Trainer | Kaboom Shebang</title>
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-</head>
-<body>
-<header>
-    <nav>
-        <h1>Kaboom Shebang</h1>
-        <h2>HTTP Trainer</h2>
-    </nav>
-</header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTTP Trainer | Kaboom Shebang</title>
+		<link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+	</head>
+	<body>
+		<header>
+			<h1>Kaboom Shebang</h1>
+			<h2>HTTP Trainer</h2>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/requests">Requests</a></li>
+					<li><a href="/methods">Methods</a></li>
+					<li><a href="/codes">Codes</a></li>
+					<li><a href="/headers">Headers</a></li>
+				</ul>
+			</nav>
+		</header>
 
-<%# start main tag %> 
-<main>
-
-<%# 
-    locals is always available
-    if page.title not set than
-    undefined || true
-%> 
-<h3><%= locals.page.title || 'page title not set' %></h3>
+		<%# start main tag %>
+		<main>
+			<%# locals is always available if page.title not set than undefined || true %>
+			<h3><%= locals.page.title || 'page title not set' %></h3>
+		</main>
+	</body>
+</html>
