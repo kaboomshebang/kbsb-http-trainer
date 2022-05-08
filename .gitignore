@@ -156,3 +156,7 @@ pids
 *.pid
 *.seed
 *.pid.lock
+
+# project management
+todos.md
+notes.md
