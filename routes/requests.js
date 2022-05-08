@@ -3,7 +3,11 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/', (req, res, next) => {
-	res.send('requests');
+	const params = { title: 'Requests' };
+	res.render('routes/requests', params, (err, html) => {
+		if (err) throw err;
+		res.send(html);
+	});
 });
 
 export default router;
