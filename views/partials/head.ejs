@@ -5,9 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>
-			<%# locals is always available if page.title not set than undefined || true %>
-			<%= locals.title || 'page title not set' %>
-			HTTP Trainer | Kaboom Shebang</title>
+			<%# locals is always available %>
+			<% if (locals.title) { %>
+				<%= locals.title %> | 
+			<% } %>
+
+			<%= locals.siteTitle || 'Site title not set' %>
+		</title>
 		<link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
 	</head>
 	<body>

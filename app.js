@@ -15,6 +15,8 @@ const app = express();
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
+app.locals.siteTitle = 'HTTP Trainer | Kaboom Shebang';
+
 // set a static asset folder
 app.use(express.static('./public'));
 
