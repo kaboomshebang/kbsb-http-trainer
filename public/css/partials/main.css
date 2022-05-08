@@ -1,0 +1,26 @@
+:root {
+	--primary: rgb(55, 77, 132);
+	--accent: rgb(150, 189, 206, 0.5);
+	--container-width: 1000px;
+}
+
+header,
+main,
+footer {
+	width: var(--container-width);
+	margin: 0 auto;
+}
+
+html {
+	font-size: 14px;
+	line-height: 150%;
+}
+
+a {
+	background-color: var(--accent);
+	color: var(--primary);
+}
+
+pre {
+	background-color: rgb(212, 212, 212);
+}
