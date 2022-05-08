@@ -1,4 +1,5 @@
 import express from 'express';
+import { default as index } from './routes/index.js';
 import 'dotenv/config';
 
 const HOST = process.env.HOST || 'localhost';
@@ -13,12 +14,8 @@ app.set('view engine', 'ejs');
 // set a static asset folder
 app.use(express.static('./public'));
 
-app.get('/', (req, res, next) => {
-	const params = { page: { title: 'Home' } };
-	res.render('index', params, (err, html) => {
-		res.send(html);
-	});
-});
+// routes
+app.use('/', index);
 
 app.listen(PORT, HOST, () => {
 	console.log(`Server listening on ${HOST}:${PORT}...`);
