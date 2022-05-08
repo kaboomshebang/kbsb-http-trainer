@@ -7,7 +7,7 @@ const router = Router();
 // routes
 router.get('/', (req, res, next) => {
 	const params = { page: { title: 'Home' } };
-	res.render('index', params, (err, html) => {
+	res.render('routes/index', params, (err, html) => {
 		res.send(html);
 	});
 });
