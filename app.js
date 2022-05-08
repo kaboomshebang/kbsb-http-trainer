@@ -10,7 +10,10 @@ const app = express();
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.get('/', (req, res, next) => {
-	res.send('Hello');
+	const params = { page: { title: 'Home' } };
+	res.render('index', params, (err, html) => {
+		res.send(html);
+	});
 });
 
 app.listen(PORT, HOST, () => {
