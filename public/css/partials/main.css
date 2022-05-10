@@ -1,6 +1,6 @@
 :root {
-	--primary: rgb(55, 77, 132);
-	--accent: rgb(150, 189, 206, 0.5);
+	--primary: #ed9d13;
+	--accent: #6ab825;
 	--container-width: 1000px;
 }
 

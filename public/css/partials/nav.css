@@ -1,7 +1,24 @@
 nav ul {
 	list-style-type: none;
+	padding: 0;
 }
 
 nav ul li {
 	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+nav ul li:last-child {
+	margin: 0;
+}
+
+/* override global link background color */
+nav ul li a {
+	background: 0;
+}
+
+@media only screen and (min-width: 550px) {
+	nav ul li {
+		margin: 0 10px 0 0;
+	}
 }
