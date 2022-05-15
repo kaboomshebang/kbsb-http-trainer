@@ -160,3 +160,8 @@ pids
 # project management
 todos.md
 notes.md
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
