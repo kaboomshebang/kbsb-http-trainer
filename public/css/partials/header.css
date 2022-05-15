@@ -4,7 +4,12 @@ header div {
 	justify-content: space-between;
 }
 
-header div img {
+header div > a {
+	all: unset; /* remove all global link styles */
+	cursor: pointer;
+}
+
+header div > a > img {
 	padding: 20px 0;
 	width: 200px;
 }
