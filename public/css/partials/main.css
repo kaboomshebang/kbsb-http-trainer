@@ -4,6 +4,12 @@
 	--container-width: 1000px;
 }
 
+body {
+	font-family: 'IBM Plex Sans';
+	font-weight: 400;
+	line-height: 150%;
+}
+
 header,
 main,
 footer {
@@ -13,7 +19,7 @@ footer {
 }
 
 html {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 150%;
 }
 
