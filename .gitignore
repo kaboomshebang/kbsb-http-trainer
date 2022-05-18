@@ -163,5 +163,6 @@ notes.md
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
+# except:
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
