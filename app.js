@@ -6,7 +6,7 @@ import { default as requests } from './routes/requests.js';
 import { default as codes } from './routes/codes.js';
 import 'dotenv/config';
 
-const HOST = process.env.HOST || 'localhost';
+const HOST = process.env.HOST || '0.0.0.0';
 const PORT = process.env.PORT || 5000;
 
 const app = express();
