@@ -6,8 +6,19 @@ import { default as requests } from './routes/requests.js';
 import { default as codes } from './routes/codes.js';
 import 'dotenv/config';
 
+import { default as livereload } from 'livereload';
+import { default as connectLiveReload } from 'connect-livereload';
+
 const HOST = process.env.HOST || '0.0.0.0';
 const PORT = process.env.PORT || 5000;
+
+// setup the livereloadserver
+const liveReloadServer = livereload.createServer();
+liveReloadServer.server.once('connection', () => {
+	setTimeout(() => {
+		liveReloadServer.refresh('/');
+	}, 100);
+});
 
 const app = express();
 
@@ -19,6 +30,15 @@ app.locals.siteTitle = 'HTTP Trainer | Kaboom Shebang';
 
 // set a static asset folder
 app.use(express.static('./public'));
+
+// conditional to load browser live reload
+if (process.env.ENV === 'dev') {
+	app.use(
+		connectLiveReload({
+			port: 35729,
+		})
+	);
+}
 
 // routes
 app.use('/', index);

@@ -32,3 +32,7 @@ eb open # only works on local machines
 # or, get instance URL
 eb status | grep CNAME
 ```
+
+## Livereload
+
+For live browser reload set `ENV` to `dev`
