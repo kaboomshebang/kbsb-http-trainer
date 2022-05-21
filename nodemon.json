@@ -1,0 +1,11 @@
+{
+	"restartable": "rs",
+    "verbose": false,
+	"ignore": [".git", "node_modules", "_build", ".elasticbeanstalk"],
+	"watch": ["app.js", "views/**/*.*", "routes/**/*.*", "public/**/*.*", "data/**/*.*"],
+	"env": {
+		"ENV": "dev",
+        "HOST": "192.168.178.172"
+	},
+    "ext": "ejs js json css html jpg png scss"
+}
